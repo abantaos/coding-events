@@ -26,16 +26,17 @@ public class EventController {
         return "events/index";
     }
 
+    // lives at /events/create
     @GetMapping("create")
     public String displayCreateEventForm(Model model) {
         model.addAttribute("title", "Create Event");
-        return "events/create";
+        return "events/create"; //this is returning name of template
     }
 
     @PostMapping("create")
     public String processCreateEventForm(@RequestParam String eventName) {
         events.add(eventName);
-        return "redirect:";
+        return "redirect:"; //we're directing to root path so leave empty
     }
 
 }
