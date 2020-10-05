@@ -12,7 +12,7 @@ import java.util.Map;
 public class EventData {
 
     private static final Map<Integer, Event> events = new HashMap<>();
-
+    // static variable ^ shared among all instances of this class
     public static Collection<Event> getAll() {
         return events.values();
     }
@@ -30,3 +30,7 @@ public class EventData {
     }
 
 }
+
+
+// didn't call instance of class using constructor w this.field
+// so this class only exists to provide access to models
