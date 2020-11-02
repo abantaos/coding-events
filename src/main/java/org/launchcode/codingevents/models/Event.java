@@ -14,8 +14,8 @@ import java.util.Objects;
 @Entity
 public class Event {
 
-    @Id
-    @GeneratedValue
+    @Id // like the primary key
+    @GeneratedValue // like the auto increment
     private int id;
 
     @NotBlank(message = "Name is required")
